@@ -40,5 +40,6 @@ RUN mkdir -p $P4/build && \
 # Log in directly to binaries
 WORKDIR $P4/build/examples
 RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+RUN apt-get update
 # Startup
 CMD ["/bin/bash"]
